@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[ ]:
+# In[1]:
 
 
 # import libraries 
@@ -14,7 +14,7 @@ import datetime
 import smtplib
 
 
-# In[ ]:
+# In[34]:
 
 
 # Connect to Website and pull in data
@@ -37,7 +37,7 @@ print(title)
 print(price)
 
 
-# In[ ]:
+# In[32]:
 
 
 # Clean up the data a little bit
@@ -78,7 +78,7 @@ with open('AmazonWebScraperDataset.csv', 'w', newline='', encoding='UTF8') as f:
     writer.writerow(data)
 
 
-# In[ ]:
+# In[23]:
 
 
 import pandas as pd
@@ -98,7 +98,7 @@ with open('AmazonWebScraperDataset.csv', 'a+', newline='', encoding='UTF8') as f
     writer.writerow(data)
 
 
-# In[ ]:
+# In[21]:
 
 
 #Combine all of the above code into one function
@@ -147,7 +147,7 @@ while(True):
     time.sleep(86400)
 
 
-# In[ ]:
+# In[31]:
 
 
 import pandas as pd
@@ -160,7 +160,7 @@ print(df)
 # In[ ]:
 
 
-# If uou want to try sending yourself an email (just for fun) when a price hits below a certain level you can try it
+# If you want to try sending yourself an email (just for fun) when a price hits below a certain level you can try it
 # out with this script
 
 def send_mail():
@@ -170,8 +170,8 @@ def send_mail():
     server.ehlo()
     server.login('tran.long.huy98@gmail.com','xxxxxxxxxxxxxx')
     
-    subject = "The Shirt you want is below $15! Now is your chance to buy!"
-    body = "Alex, This is the moment we have been waiting for. Now is your chance to pick up the shirt of your dreams. Don't mess it up! Link here: https://www.amazon.com/Funny-Data-Systems-Business-Analyst/dp/B07FNW9FGJ/ref=sr_1_3?dchild=1&keywords=data+analyst+tshirt&qid=1626655184&sr=8-3"
+    subject = "The shirt you want is below $15! Now is your chance to buy!"
+    body = "This is the moment we have been waiting for. Now is your chance to pick up the shirt of your dreams. Don't mess it up! Link here: https://www.amazon.com/Funny-Data-Systems-Business-Analyst/dp/B07FNW9FGJ/ref=sr_1_3?dchild=1&keywords=data+analyst+tshirt&qid=1626655184&sr=8-3"
    
     msg = f"Subject: {subject}\n\n{body}"
     
